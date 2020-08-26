@@ -1,6 +1,6 @@
 /**
  * 弱引用遭到gc就会回收
- *
+ * 只要有gc过程，直接gc掉，没回收之前是可以get到的
  */
 package com.mashibing.juc.c_022_RefTypeAndThreadLocal;
 

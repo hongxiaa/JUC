@@ -9,6 +9,9 @@ package com.mashibing.juc.c_022_RefTypeAndThreadLocal;
 
 import java.lang.ref.SoftReference;
 
+/**
+ * java.lang.ref.softReference<T> 在堆内存空间够用的情况下不进行gc，堆内存不够用的情况下会被gc掉 适合缓存使用，没回收之前是可以get到的
+ */
 public class T02_SoftReference {
     public static void main(String[] args) {
         SoftReference<byte[]> m = new SoftReference<>(new byte[1024*1024*10]);

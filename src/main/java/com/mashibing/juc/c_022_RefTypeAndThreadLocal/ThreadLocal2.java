@@ -1,17 +1,17 @@
-/**
- * ThreadLocalÏß³Ì¾Ö²¿±äÁ¿
- *
- * ThreadLocalÊÇÊ¹ÓÃ¿Õ¼ä»»Ê±¼ä£¬synchronizedÊÇÊ¹ÓÃÊ±¼ä»»¿Õ¼ä
- * ±ÈÈçÔÚhibernateÖĞsession¾Í´æÔÚÓëThreadLocalÖĞ£¬±ÜÃâsynchronizedµÄÊ¹ÓÃ
- *
- * ÔËĞĞÏÂÃæµÄ³ÌĞò£¬Àí½âThreadLocal
- * 
- * @author ÂíÊ¿±ø
- */
+
 package com.mashibing.juc.c_022_RefTypeAndThreadLocal;
 
 import java.util.concurrent.TimeUnit;
-
+/**
+ * ThreadLocalçº¿ç¨‹å±€éƒ¨å˜é‡
+ *
+ * ThreadLocalæ˜¯ä½¿ç”¨ç©ºé—´æ¢æ—¶é—´ï¼Œsynchronizedæ˜¯ä½¿ç”¨æ—¶é—´æ¢ç©ºé—´
+ * æ¯”å¦‚åœ¨hibernateä¸­sessionå°±å­˜åœ¨ä¸ThreadLocalä¸­ï¼Œé¿å…synchronizedçš„ä½¿ç”¨
+ *
+ * è¿è¡Œä¸‹é¢çš„ç¨‹åºï¼Œç†è§£ThreadLocal
+ * https://wemp.app/posts/a04a03f1-ac4b-4cbf-93ed-b47f591e9c51
+ * @author é©¬å£«å…µ
+ */
 public class ThreadLocal2 {
 	//volatile static Person p = new Person();
 	static ThreadLocal<Person> tl = new ThreadLocal<>();
@@ -25,7 +25,7 @@ public class ThreadLocal2 {
 				e.printStackTrace();
 			}
 			
-			System.out.println(tl.get());
+			System.out.println(Thread.currentThread()  + " "+tl.get());
 		}).start();
 		
 		new Thread(()->{
@@ -34,8 +34,10 @@ public class ThreadLocal2 {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			System.out.println(Thread.currentThread());
 			tl.set(new Person());
 		}).start();
+
 	}
 	
 	static class Person {
