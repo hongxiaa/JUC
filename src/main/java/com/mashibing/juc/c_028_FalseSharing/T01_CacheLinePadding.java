@@ -2,6 +2,9 @@ package com.mashibing.juc.c_028_FalseSharing;
 
 import java.util.Random;
 
+/**
+ * 这个是x,y在同一个缓存行中，需要通知给其它cpu，因为在同一个缓存行中
+ */
 public class T01_CacheLinePadding {
     private static class T {
         public volatile long x = 0L;

@@ -44,6 +44,7 @@ public class T01_WithoutVolatile {
 		new Thread(() -> {
 			while(true) {
 				if(c.size() == 5) {
+					System.out.println("¼ì²â....");
 					break;
 				}
 			}

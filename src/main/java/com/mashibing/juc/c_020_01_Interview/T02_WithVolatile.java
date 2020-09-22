@@ -6,6 +6,8 @@
  * 给lists添加volatile之后，t2能够接到通知，但是，t2线程的死循环很浪费cpu，如果不用死循环，
  * 而且，如果在if 和 break之间被别的线程打断，得到的结果也不精确，
  * 该怎么做呢？
+ *
+ * volatile 尽量不要修饰引用类型，因为观察不到引用类型的成员变量
  * @author mashibing
  */
 package com.mashibing.juc.c_020_01_Interview;
@@ -19,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 public class T02_WithVolatile {
 
 	//添加volatile，使t2能够得到通知
-	//volatile List lists = new LinkedList();
+//	volatile List lists = new LinkedList();
 	volatile List lists = Collections.synchronizedList(new LinkedList<>());
 
 	public void add(Object o) {
@@ -38,17 +40,18 @@ public class T02_WithVolatile {
 				c.add(new Object());
 				System.out.println("add " + i);
 				
-				/*try {
+				try {
 					TimeUnit.SECONDS.sleep(1);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
-				}*/
+				}
 			}
 		}, "t1").start();
 		
 		new Thread(() -> {
 			while(true) {
 				if(c.size() == 5) {
+					System.out.println("检测....");
 					break;
 				}
 			}

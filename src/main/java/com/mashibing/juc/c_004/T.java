@@ -16,9 +16,13 @@ public class T {
 	}
 	
 	public static void mm() {
-		synchronized(T.class) { //考虑一下这里写synchronized(this)是否可以？
+		synchronized(T.class) { //考虑一下这里写synchronized(this)是否可以？不可以,因为static属于类静态方法
 			count --;
 		}
+	}
+
+	public static void main(String[] args) {
+		m();
 	}
 
 }

@@ -1,5 +1,10 @@
 package com.mashibing.juc.c_028_FalseSharing;
 
+/**
+ * 一个缓存行64个byte，这个例子表示两个缓存行个各读写各的，正好是64个byte，互不影响
+ * x,y 读写不需要通知其它cpu
+ * 缓存行讲解
+ */
 public class T02_CacheLinePadding {
     private static class Padding {
         public volatile long p1, p2, p3, p4, p5, p6, p7;
@@ -8,7 +13,7 @@ public class T02_CacheLinePadding {
     private static class T extends Padding {
         public volatile long x = 0L;
     }
-
+    //一个64个字节
     public static T[] arr = new T[2];
 
     static {

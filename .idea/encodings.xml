@@ -15,6 +15,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_012_Volatile/T01_HelloVolatile.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_012_Volatile/T04_VolatileNotSync.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_012_Volatile/T05_VolatileVsSync.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_012_Volatile/VolatileTest.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_017_MoreAboutSync/DoNotLockString.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_017_MoreAboutSync/SyncSameObject.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_018_00_AtomicXXX/T01_AtomicInteger.java" charset="GBK" />
@@ -23,6 +24,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_020/T03_ReentrantLock3.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_020/T04_ReentrantLock4.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_020/T05_ReentrantLock5.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_020/T05_ReentrantLock6.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_020/T07_TestCyclicBarrier.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_020/T08_TestPhaser.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/mashibing/juc/c_020/T09_TestPhaser2.java" charset="GBK" />

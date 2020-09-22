@@ -47,13 +47,13 @@ public class T05_CountDownLatch {
 		T05_CountDownLatch c = new T05_CountDownLatch();
 
 		CountDownLatch latch = new CountDownLatch(1);
+		CountDownLatch latch2 = new CountDownLatch(1);
 
 		new Thread(() -> {
 			System.out.println("t2启动");
 			if (c.size() != 5) {
 				try {
 					latch.await();
-					
 					//也可以指定等待时间
 					//latch.await(5000, TimeUnit.MILLISECONDS);
 				} catch (InterruptedException e) {
