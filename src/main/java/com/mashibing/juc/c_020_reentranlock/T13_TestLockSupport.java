@@ -1,4 +1,4 @@
-package com.mashibing.juc.c_020;
+package com.mashibing.juc.c_020_reentranlock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;

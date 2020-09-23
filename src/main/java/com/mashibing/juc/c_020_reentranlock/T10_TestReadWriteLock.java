@@ -1,7 +1,6 @@
-package com.mashibing.juc.c_020;
+package com.mashibing.juc.c_020_reentranlock;
 
 import java.util.Random;
-import java.util.concurrent.atomic.LongAdder;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantLock;

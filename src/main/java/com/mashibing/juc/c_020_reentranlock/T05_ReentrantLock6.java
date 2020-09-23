@@ -4,7 +4,7 @@
  *
  * @author mashibing
  */
-package com.mashibing.juc.c_020;
+package com.mashibing.juc.c_020_reentranlock;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

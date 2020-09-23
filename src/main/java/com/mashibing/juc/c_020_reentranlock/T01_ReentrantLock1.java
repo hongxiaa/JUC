@@ -4,7 +4,7 @@
  * 这里是复习synchronized最原始的语义
  * @author mashibing
  */
-package com.mashibing.juc.c_020;
+package com.mashibing.juc.c_020_reentranlock;
 
 import java.util.concurrent.TimeUnit;
 

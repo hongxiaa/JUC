@@ -23,13 +23,15 @@ public class MyContainer2<T> {
 	private int count = 0;
 	
 	private Lock lock = new ReentrantLock();
+	//本质，不同的等待队列
 	private Condition producer = lock.newCondition();
 	private Condition consumer = lock.newCondition();
 	
 	public void put(T t) {
 		try {
 			lock.lock();
-			while(lists.size() == MAX) { //想想为什么用while而不是用if？
+			//重点
+			while(lists.size() == MAX) { //想想为什么用while而不是用if？while 会多一次条件判断
 				producer.await();
 			}
 			
